@@ -1,1 +1,1 @@
-# `dmacRtools`: Data curation tools in for Project STEEP
+# `dmacRtools`: Data curation tools for Project STEEP

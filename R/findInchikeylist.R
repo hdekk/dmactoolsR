@@ -7,7 +7,9 @@ foundinchiKeyList1 <- function( search_values) {
 
   # Create an empty list to store the matching cell values
   matching_values <- c()
-  load("data/PFAS_inventory.rda")
+  #load("/data/PFAS_inventory.rda")
+  utils::data("inventory", envir = environment())
+
   for (search_value in search_values){
     row_index <- which(inventory$Abbreviation == search_value)
     #print(row_index)

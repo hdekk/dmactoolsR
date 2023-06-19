@@ -2,7 +2,7 @@
 
 
 
-foundinchiKeyList1 <- function( search_values) {
+foundinchiKeyList1 <- function(search_values) {
   # Find the row index where the search value matches the search column
 
   # Create an empty list to store the matching cell values

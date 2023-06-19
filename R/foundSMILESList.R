@@ -1,14 +1,16 @@
 #rfunctions for find smiles list
 
 
-foundSMILESList <- function(datafile, search_values) {
+foundSMILESList <- function(search_values) {
   # Find the row index where the search value matches the search column
 
   # Create an empty list to store the matching cell values
   matching_values <- c()
+  #load("/data/PFAS_inventory.rda")
+  utils::data("inventory", envir = environment())
 
   for (search_value in search_values){
-    row_index <- which(datafile$Abbreviation == search_value)
+    row_index <- which(inventory$Abbreviation == search_value)
     #print(row_index)
 
     # Check if any matches were found
@@ -18,10 +20,10 @@ foundSMILESList <- function(datafile, search_values) {
     }
 
     # Extract the cell value at the given row index and return column
-    inchikey <- datafile$SMILES[row_index]
+    smiles <- inventory$SMILES[row_index]
     #print(inchikey)
     # append values to the list
-    matching_values <- c(matching_values, inchikey)
+    matching_values <- c(matching_values, smiles)
   }
 
   return(matching_values)

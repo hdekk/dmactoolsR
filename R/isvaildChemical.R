@@ -1,6 +1,6 @@
 #rfunctions for find whether the chemicals are valid
 
-isvalid <- function(search_values) {
+isvalidChemical <- function(search_values) {
 
   utils::data("inventory", envir = environment())
 
